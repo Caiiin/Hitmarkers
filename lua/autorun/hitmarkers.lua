@@ -137,3 +137,16 @@ if CLIENT then
 	end)
 end
 
+local function hitmarkerCC(ply, text)
+	local cmd = text
+	if (string.lower(cmd) == "!hitmarker" ) then
+		ply:PrintMessage( HUD_PRINTTALK, "Check your console for information regarding hitmarkers." )
+		ply:PrintMessage( HUD_PRINTCONSOLE, " ----------------------------------------------------------------------------------------------------")
+		ply:PrintMessage( HUD_PRINTCONSOLE," hm_enabled 1/0 - Enables (1) or disables the hitmarkers, clientside.")
+		ply:PrintMessage( HUD_PRINTCONSOLE," hm_hitsound 1/0 - Enables or disables the sound played on hit." )
+		ply:PrintMessage( HUD_PRINTCONSOLE, " hm_hitmarkertype - Changes your crosshair design between one of three options.")
+		ply:PrintMessage( HUD_PRINTCONSOLE, " Options are 'Lines' , 'SideSqr_Lines' and 'Sqr_Rot' ")
+		ply:PrintMessage( HUD_PRINTCONSOLE, " hm_hitmarkercolor r, g, b - This is the first method of changing your crosshair color using Red, Green, Blue color codes if you want something specific.")
+		ply:PrintMessage( HUD_PRINTCONSOLE, " ----------------------------------------------------------------------------------------------------")
+	end
+end
